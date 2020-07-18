@@ -15,12 +15,12 @@ struct NetworkManager {
         self.session = session
     }
     
-    func fetchAboutCountryUsing(_ requestComponent: URLComponents, onCompletion: ((NetworkResponse) -> Void)?) {
+    func fetchCountryDataUsing(_ requestComponent: URLComponents, onCompletion: ((NetworkResponse) -> Void)?) {
         guard let requestURL = requestComponent.url else {
             onCompletion?(NetworkResponse(error: .badRequest))
             return
         }
-        session.fetchAboutCountry(request: URLRequest(url: requestURL),
-                                  completionHandler: onCompletion)
+        session.fetchCountry(request: URLRequest(url: requestURL),
+                             completionHandler: onCompletion)
     }
 }

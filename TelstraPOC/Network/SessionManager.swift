@@ -9,8 +9,8 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-    func fetchAboutCountry(request: URLRequest,
-                           completionHandler: ((_ response: NetworkResponse) -> Void)?)
+    func fetchCountry(request: URLRequest,
+                      completionHandler: ((_ response: NetworkResponse) -> Void)?)
 }
 
 struct SessionManager {
@@ -23,8 +23,8 @@ struct SessionManager {
 
 extension SessionManager: NetworkManagerProtocol {
     
-    func fetchAboutCountry(request: URLRequest,
-                           completionHandler: ((NetworkResponse) -> Void)?) {
+    func fetchCountry(request: URLRequest,
+                      completionHandler: ((NetworkResponse) -> Void)?) {
         urlSession.dataTask(with: request) { (data, response, error) in
             let response = NetworkResponse(data: data, response: response, error: error)
             DispatchQueue.main.async {

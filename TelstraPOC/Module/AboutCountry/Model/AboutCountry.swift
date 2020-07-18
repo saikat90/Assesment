@@ -16,10 +16,10 @@ struct AboutCountry: Decodable {
         case title
         case countryInformations = "rows"
     }
-    
 }
 
 struct CountryInformation: Decodable {
     let title: String?
     let description: String?
+    let imageHref: String?
 }

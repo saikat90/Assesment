@@ -21,7 +21,7 @@ struct NetworkResponse {
         do {
             parsedData = try decoder.decode(T.self, from: jsonData)
         } catch let error {
-            print("\(error.localizedDescription)")
+            Logger.error(message: error.localizedDescription)
         }
         return parsedData
     }
