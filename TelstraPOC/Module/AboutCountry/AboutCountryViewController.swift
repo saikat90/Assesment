@@ -42,6 +42,18 @@ class AboutCountryViewController: UIViewController {
         configurePullToRefresh()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        let animationHandler: ((UIViewControllerTransitionCoordinatorContext) -> Void) = { [weak self] (context) in
+            self?.aboutCountryTableView.reloadData()
+        }
+        
+        let completionHandler: ((UIViewControllerTransitionCoordinatorContext) -> Void) = { [weak self] (context) in
+            self?.aboutCountryTableView.reloadData()
+        }
+        coordinator.animate(alongsideTransition: animationHandler, completion: completionHandler)
+    }
+    
     private func configureView() {
         view.backgroundColor = UIColor.white
         aboutCountryTableView.tableFooterView = UIView(frame: CGRect.zero)
@@ -49,8 +61,8 @@ class AboutCountryViewController: UIViewController {
         view.addSubview(aboutCountryTableView)
         NSLayoutConstraint.activate([
             aboutCountryTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            aboutCountryTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            aboutCountryTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            aboutCountryTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            aboutCountryTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             aboutCountryTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
@@ -66,12 +78,15 @@ class AboutCountryViewController: UIViewController {
     
     private func fetchAboutTheCountryInformation() {
         viewModel.fetchCountryInformation { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.view.hideActivityIndicator()
-            strongSelf.title = strongSelf.viewModel.navigationTitle ?? ""
-            strongSelf.refreshControl.endRefreshing()
-            strongSelf.aboutCountryTableView.reloadData()
+            self?.reloadAboutCountryInformation()
         }
+    }
+    
+    private func reloadAboutCountryInformation() {
+        view.hideActivityIndicator()
+        title = viewModel.navigationTitle ?? ""
+        refreshControl.endRefreshing()
+        aboutCountryTableView.reloadData()
     }
     
     fileprivate func startDownloadImageFor(model: CountryInfoCellViewModel,at indexPath: IndexPath) {
@@ -111,6 +126,12 @@ class AboutCountryViewController: UIViewController {
             }
         }
     }
+    
+    fileprivate func createErrorTableViewCellFor(_ model: CountryInfoCellViewModel) -> UITableViewCell {
+        let tableViewCell = UITableViewCell()
+        tableViewCell.textLabel?.text = model.errorTitle
+        return tableViewCell
+    }
 }
 
 extension AboutCountryViewController: UITableViewDelegate {
@@ -132,12 +153,13 @@ extension AboutCountryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let countryInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: CountryInfoTableViewCell.identifier,
+        let cellModel = viewModel.cellModelAt(index: indexPath.row)
+        guard let cellIdentifier = cellModel.cellIdentifier,
+            let countryInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,
                                                                            for: indexPath) as? CountryInfoTableViewCell else {
                                                                             Logger.error(message: "Fail to create Cell")
-                                                                            return UITableViewCell()
+                                                                            return createErrorTableViewCellFor(cellModel)
         }
-        let cellModel = viewModel.cellModelAt(index: indexPath.row)
         countryInfoTableViewCell.setUpWith(cellModel)
         switch cellModel.downloadingState {
         case .new:

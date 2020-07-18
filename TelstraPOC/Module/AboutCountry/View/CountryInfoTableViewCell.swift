@@ -10,32 +10,38 @@ import UIKit
 
 class CountryInfoTableViewCell: UITableViewCell {
     
-    lazy var titleLabel: UILabel = {
-        return createLabelWith(font: UIFont.systemFont(ofSize: 16, weight: .medium),
+    private lazy var titleLabel: UILabel = {
+        return createLabelWith(font: UIFont.systemFont(ofSize: 18, weight: .semibold),
                                numberOfLines: 1)
     }()
     
-    lazy var descriptionLabel: UILabel = {
+    private lazy var descriptionLabel: UILabel = {
         return createLabelWith(font: UIFont.systemFont(ofSize: 14))
     }()
     
-    lazy var infoImageView: UIImageView = {
+    private lazy var infoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+        
+    lazy var imageDescriptionStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.spacing = 10
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        return stackView
+    }()
     
-    lazy var containerStackView: UIStackView = {
+    private lazy var containerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 10
-        stackView.alignment = .leading
+        stackView.distribution = .fill
         addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            infoImageView.heightAnchor.constraint(equalToConstant: 100),
-            infoImageView.widthAnchor.constraint(equalToConstant: 100),
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
@@ -44,20 +50,23 @@ class CountryInfoTableViewCell: UITableViewCell {
         return stackView
     }()
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    var isLandscape: Bool {
+        return UIScreen.main.bounds.width > UIScreen.main.bounds.height
     }
     
     func setUpWith(_ cellModel: CountryInfoCellViewModel) {
         titleLabel.text = cellModel.title
+        titleLabel.textAlignment = .center
         descriptionLabel.text = cellModel.description
         infoImageView.image = UIImage(named: "placeholder")
         if let imageData = cellModel.imageData {
             infoImageView.image = UIImage(data: imageData)
         }
-        containerStackView.addArrangedSubview(titleLabel)
-        containerStackView.addArrangedSubview(infoImageView)
+        imageDescriptionStackView.addArrangedSubview(titleLabel)
+        imageDescriptionStackView.addArrangedSubview(infoImageView)
+        containerStackView.addArrangedSubview(imageDescriptionStackView)
         containerStackView.addArrangedSubview(descriptionLabel)
+        containerStackView.axis = isLandscape ? .horizontal : .vertical
     }
     
     private func createLabelWith(font: UIFont,

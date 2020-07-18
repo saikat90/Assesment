@@ -23,6 +23,8 @@ class AboutCountryViewModel {
             guard let strongSelf = self else { return }
             guard let aboutCountry: AboutCountry = response.parseData() else {
                 Logger.error(message: response.parseError())
+                strongSelf.cellModels = [CountryInfoCellViewModel(errorTitle: response.parseError())]
+                onCompletion()
                 return
             }
             strongSelf.navigationTitle = aboutCountry.title

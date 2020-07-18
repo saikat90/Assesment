@@ -20,13 +20,25 @@ class CountryInfoCellViewModel {
     let description: String?
     var downloadingState: ImageDownloadingState = .new
     var imageData: Data?
+    let cellIdentifier: String?
+    let errorTitle: String?
     
     init?(model: CountryInformation?) {
         guard let infoTitle = model?.title else {
             return nil
         }
+        self.errorTitle = nil
         self.description = model?.description
         self.title = infoTitle
         self.imageURL = model?.imageHref
+        self.cellIdentifier = CountryInfoTableViewCell.identifier
+    }
+    
+    init(errorTitle: String) {
+        self.errorTitle = errorTitle
+        imageURL = nil
+        description = nil
+        cellIdentifier = nil
+        title = nil
     }
 }
