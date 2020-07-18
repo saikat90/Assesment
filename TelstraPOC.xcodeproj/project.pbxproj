@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE9E8C2E24C2F24D006B4BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C2D24C2F24D006B4BB5 /* AppDelegate.swift */; };
+		AE9E8C3024C2F24D006B4BB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C2F24C2F24D006B4BB5 /* SceneDelegate.swift */; };
+		AE9E8C3724C2F250006B4BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9E8C3624C2F250006B4BB5 /* Assets.xcassets */; };
+		AE9E8C3A24C2F250006B4BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9E8C3824C2F250006B4BB5 /* LaunchScreen.storyboard */; };
+		AE9E8C4224C2FC1B006B4BB5 /* NetworkRequestPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C4124C2FC1B006B4BB5 /* NetworkRequestPath.swift */; };
+		AE9E8C4624C3058E006B4BB5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C4524C3058E006B4BB5 /* NetworkManager.swift */; };
+		AE9E8C4824C305E1006B4BB5 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C4724C305E1006B4BB5 /* SessionManager.swift */; };
+		AE9E8C4A24C30615006B4BB5 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C4924C30615006B4BB5 /* NetworkResponse.swift */; };
+		AE9E8C4C24C3063F006B4BB5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C4B24C3063F006B4BB5 /* NetworkError.swift */; };
+		AE9E8C4F24C30B65006B4BB5 /* AboutCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C4D24C30B65006B4BB5 /* AboutCountryViewController.swift */; };
+		AE9E8C5024C30B65006B4BB5 /* AboutCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C4E24C30B65006B4BB5 /* AboutCountryViewModel.swift */; };
+		AE9E8C5224C30C59006B4BB5 /* CountryInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C5124C30C59006B4BB5 /* CountryInfoCellViewModel.swift */; };
+		AE9E8C5424C31467006B4BB5 /* AboutCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E8C5324C31467006B4BB5 /* AboutCountry.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE9E8C2A24C2F24D006B4BB5 /* TelstraPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstraPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9E8C2D24C2F24D006B4BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE9E8C2F24C2F24D006B4BB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE9E8C3624C2F250006B4BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE9E8C3924C2F250006B4BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE9E8C3B24C2F250006B4BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9E8C4124C2FC1B006B4BB5 /* NetworkRequestPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestPath.swift; sourceTree = "<group>"; };
+		AE9E8C4524C3058E006B4BB5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AE9E8C4724C305E1006B4BB5 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		AE9E8C4924C30615006B4BB5 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		AE9E8C4B24C3063F006B4BB5 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		AE9E8C4D24C30B65006B4BB5 /* AboutCountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCountryViewController.swift; sourceTree = "<group>"; };
+		AE9E8C4E24C30B65006B4BB5 /* AboutCountryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCountryViewModel.swift; sourceTree = "<group>"; };
+		AE9E8C5124C30C59006B4BB5 /* CountryInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoCellViewModel.swift; sourceTree = "<group>"; };
+		AE9E8C5324C31467006B4BB5 /* AboutCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCountry.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE9E8C2724C2F24D006B4BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE9E8C2124C2F24D006B4BB5 = {
+			isa = PBXGroup;
+			children = (
+				AE9E8C2C24C2F24D006B4BB5 /* TelstraPOC */,
+				AE9E8C2B24C2F24D006B4BB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE9E8C2B24C2F24D006B4BB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE9E8C2A24C2F24D006B4BB5 /* TelstraPOC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE9E8C2C24C2F24D006B4BB5 /* TelstraPOC */ = {
+			isa = PBXGroup;
+			children = (
+				AE9E8C2D24C2F24D006B4BB5 /* AppDelegate.swift */,
+				AE9E8C2F24C2F24D006B4BB5 /* SceneDelegate.swift */,
+				AE9E8C4D24C30B65006B4BB5 /* AboutCountryViewController.swift */,
+				AE9E8C4E24C30B65006B4BB5 /* AboutCountryViewModel.swift */,
+				AE9E8C5124C30C59006B4BB5 /* CountryInfoCellViewModel.swift */,
+				AE9E8C5324C31467006B4BB5 /* AboutCountry.swift */,
+				AE9E8C4124C2FC1B006B4BB5 /* NetworkRequestPath.swift */,
+				AE9E8C4724C305E1006B4BB5 /* SessionManager.swift */,
+				AE9E8C4524C3058E006B4BB5 /* NetworkManager.swift */,
+				AE9E8C4924C30615006B4BB5 /* NetworkResponse.swift */,
+				AE9E8C4B24C3063F006B4BB5 /* NetworkError.swift */,
+				AE9E8C3624C2F250006B4BB5 /* Assets.xcassets */,
+				AE9E8C3824C2F250006B4BB5 /* LaunchScreen.storyboard */,
+				AE9E8C3B24C2F250006B4BB5 /* Info.plist */,
+			);
+			path = TelstraPOC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE9E8C2924C2F24D006B4BB5 /* TelstraPOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9E8C3E24C2F250006B4BB5 /* Build configuration list for PBXNativeTarget "TelstraPOC" */;
+			buildPhases = (
+				AE9E8C2624C2F24D006B4BB5 /* Sources */,
+				AE9E8C2724C2F24D006B4BB5 /* Frameworks */,
+				AE9E8C2824C2F24D006B4BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelstraPOC;
+			productName = TelstraPOC;
+			productReference = AE9E8C2A24C2F24D006B4BB5 /* TelstraPOC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE9E8C2224C2F24D006B4BB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Guchhait, Saikat";
+				TargetAttributes = {
+					AE9E8C2924C2F24D006B4BB5 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = AE9E8C2524C2F24D006B4BB5 /* Build configuration list for PBXProject "TelstraPOC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE9E8C2124C2F24D006B4BB5;
+			productRefGroup = AE9E8C2B24C2F24D006B4BB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE9E8C2924C2F24D006B4BB5 /* TelstraPOC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE9E8C2824C2F24D006B4BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9E8C3A24C2F250006B4BB5 /* LaunchScreen.storyboard in Resources */,
+				AE9E8C3724C2F250006B4BB5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE9E8C2624C2F24D006B4BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9E8C5424C31467006B4BB5 /* AboutCountry.swift in Sources */,
+				AE9E8C4624C3058E006B4BB5 /* NetworkManager.swift in Sources */,
+				AE9E8C5224C30C59006B4BB5 /* CountryInfoCellViewModel.swift in Sources */,
+				AE9E8C4A24C30615006B4BB5 /* NetworkResponse.swift in Sources */,
+				AE9E8C4F24C30B65006B4BB5 /* AboutCountryViewController.swift in Sources */,
+				AE9E8C2E24C2F24D006B4BB5 /* AppDelegate.swift in Sources */,
+				AE9E8C3024C2F24D006B4BB5 /* SceneDelegate.swift in Sources */,
+				AE9E8C4224C2FC1B006B4BB5 /* NetworkRequestPath.swift in Sources */,
+				AE9E8C5024C30B65006B4BB5 /* AboutCountryViewModel.swift in Sources */,
+				AE9E8C4C24C3063F006B4BB5 /* NetworkError.swift in Sources */,
+				AE9E8C4824C305E1006B4BB5 /* SessionManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE9E8C3824C2F250006B4BB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE9E8C3924C2F250006B4BB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE9E8C3C24C2F250006B4BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE9E8C3D24C2F250006B4BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE9E8C3F24C2F250006B4BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2CD8KZ9GN;
+				INFOPLIST_FILE = TelstraPOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.TelstraPOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE9E8C4024C2F250006B4BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2CD8KZ9GN;
+				INFOPLIST_FILE = TelstraPOC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.TelstraPOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE9E8C2524C2F24D006B4BB5 /* Build configuration list for PBXProject "TelstraPOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9E8C3C24C2F250006B4BB5 /* Debug */,
+				AE9E8C3D24C2F250006B4BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9E8C3E24C2F250006B4BB5 /* Build configuration list for PBXNativeTarget "TelstraPOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9E8C3F24C2F250006B4BB5 /* Debug */,
+				AE9E8C4024C2F250006B4BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE9E8C2224C2F24D006B4BB5 /* Project object */;
+}
