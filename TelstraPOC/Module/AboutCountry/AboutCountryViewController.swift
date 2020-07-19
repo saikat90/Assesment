@@ -36,6 +36,7 @@ class AboutCountryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.showActivityIndicator()
         configureView()
         fetchAboutTheCountryInformation()
