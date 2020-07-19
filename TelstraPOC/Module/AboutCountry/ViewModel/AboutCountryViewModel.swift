@@ -9,17 +9,19 @@
 import Foundation
 
 class AboutCountryViewModel {
-        
-    lazy var networkManager: NetworkManager = {
-        return NetworkManager()
-    }()
+    
+    private var networkManager: NetworkManager?
     
     var navigationTitle: String?
     private var cellModels = [CountryInfoCellViewModel]()
     
+    init(networkManager: NetworkManager = NetworkManager()) {
+        self.networkManager = networkManager
+    }
+    
     func fetchCountryInformation(onCompletion: @escaping () ->()) {
         let requestComponent = NetworkRequestPath.aboutCountry.component()
-        networkManager.fetchCountryDataUsing(requestComponent) {[weak self] response in
+        networkManager?.fetchCountryDataUsing(requestComponent) {[weak self] response in
             guard let strongSelf = self else { return }
             guard let aboutCountry: AboutCountry = response.parseData() else {
                 Logger.error(message: response.parseError())
@@ -40,5 +42,5 @@ class AboutCountryViewModel {
     func cellModelAt(index: Int) -> CountryInfoCellViewModel {
         return cellModels[index]
     }
-        
+    
 }
