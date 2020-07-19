@@ -36,7 +36,6 @@ class AboutCountryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
         view.showActivityIndicator()
         configureView()
         fetchAboutTheCountryInformation()
@@ -131,6 +130,7 @@ class AboutCountryViewController: UIViewController {
     fileprivate func createErrorTableViewCellFor(_ model: CountryInfoCellViewModel) -> UITableViewCell {
         let tableViewCell = UITableViewCell()
         tableViewCell.textLabel?.text = model.errorTitle
+        tableViewCell.textLabel?.numberOfLines = 0
         return tableViewCell
     }
 }
@@ -170,7 +170,7 @@ extension AboutCountryViewController: UITableViewDataSource {
         case .failed:
             Logger.error(message: "Image Downloading failed")
         default:
-            Logger.error(message: "Image Downloading Success")
+            Logger.info(message:"Image Downloading Success")
         }
         return countryInfoTableViewCell
     }
